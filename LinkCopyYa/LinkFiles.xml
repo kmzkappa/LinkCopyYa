@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<copy_files>
+  <file name="aaa.txt">
+    <dir>dir1</dir>
+    <dir>dir2</dir>
+  </file>
+  <file name="bbb.txt">
+    <dir>dir3</dir>
+    <dir default="true">dir4</dir>
+    <dir>dir5</dir>
+  </file>
+  <file name="ccc.txt">
+    <dir>dir6</dir>
+    <dir>dir7</dir>
+  </file>
+  <file name="ddd.txt">
+    <dir>dir8</dir>
+    <dir>dir9</dir>
+  </file>
+  <file name="aaa.txt">
+    <dir>dir1</dir>
+    <dir>dir2</dir>
+  </file>
+  <file name="bbb.txt">
+    <dir>dir3</dir>
+    <dir>dir4</dir>
+    <dir>dir5</dir>
+  </file>
+  <file name="ccc.txt">
+    <dir>dir6</dir>
+    <dir>dir7</dir>
+  </file>
+  <file name="ddd.txt">
+    <dir>dir8</dir>
+    <dir>dir9</dir>
+  </file>
+  <file name="aaa.txt">
+    <dir>dir1</dir>
+    <dir>dir2</dir>
+  </file>
+  <file name="bbb.txt">
+    <dir>dir3</dir>
+    <dir>dir4</dir>
+    <dir>dir5</dir>
+  </file>
+  <file name="ccc.txt">
+    <dir>dir6</dir>
+    <dir>dir7</dir>
+  </file>
+  <file name="ddd.txt">
+    <dir>dir8</dir>
+    <dir>dir9</dir>
+  </file>
+  <file name="aaa.txt">
+    <dir>dir1</dir>
+    <dir>dir2</dir>
+  </file>
+  <file name="bbb.txt">
+    <dir>dir3</dir>
+    <dir>dir4</dir>
+    <dir>dir5</dir>
+  </file>
+  <file name="ccc.txt">
+    <dir>dir6</dir>
+    <dir>dir7</dir>
+  </file>
+  <file name="ddd.txt">
+    <dir>dir8</dir>
+    <dir>dir9</dir>
+  </file>
+  <file name="aaa.txt">
+    <dir>dir1</dir>
+    <dir>dir2</dir>
+  </file>
+  <file name="bbb.txt">
+    <dir>dir3</dir>
+    <dir>dir4</dir>
+    <dir>dir5</dir>
+  </file>
+  <file name="ccc.txt">
+    <dir>dir6</dir>
+    <dir>dir7</dir>
+  </file>
+  <file name="ddd.txt">
+    <dir>dir8</dir>
+    <dir>dir9</dir>
+  <file name="aaa.txt">
+    <dir>dir1</dir>
+    <dir>dir2</dir>
+  </file>
+  <file name="bbb.txt">
+    <dir>dir3</dir>
+    <dir>dir4</dir>
+    <dir>dir5</dir>
+  </file>
+  <file name="ccc.txt">
+    <dir>dir6</dir>
+    <dir>dir7</dir>
+  </file>
+  <file name="ddd.txt">
+    <dir>dir8</dir>
+    <dir>dir9</dir>
+  </file>
+  <file name="aaa.txt">
+    <dir>dir1</dir>
+    <dir>dir2</dir>
+  </file>
+  <file name="bbb.txt">
+    <dir>dir3</dir>
+    <dir>dir4</dir>
+    <dir>dir5</dir>
+  </file>
+  <file name="ccc.txt">
+    <dir>dir6</dir>
+    <dir>dir7</dir>
+  </file>
+  <file name="ddd.txt">
+    <dir>dir8</dir>
+    <dir>dir9</dir>
+  </file>
+  <file name="aaa.txt">
+    <dir>dir1</dir>
+    <dir>dir2</dir>
+  </file>
+  <file name="bbb.txt">
+    <dir>dir3</dir>
+    <dir>dir4</dir>
+    <dir>dir5</dir>
+  </file>
+  <file name="ccc.txt">
+    <dir>dir6</dir>
+    <dir>dir7</dir>
+  </file>
+  <file name="ddd.txt">
+    <dir>dir8</dir>
+    <dir>dir9</dir>
+  </file>
+  <file name="aaa.txt">
+    <dir>dir1</dir>
+    <dir>dir2</dir>
+  </file>
+  <file name="bbb.txt">
+    <dir>dir3</dir>
+    <dir>dir4</dir>
+    <dir>dir5</dir>
+  </file>
+  <file name="ccc.txt">
+    <dir>dir6</dir>
+    <dir>dir7</dir>
+  </file>
+  <file name="ddd.txt">
+    <dir>dir8</dir>
+    <dir>dir9</dir>
+  </file>
+    <file name="aaa.txt">
+    <dir>dir1</dir>
+    <dir>dir2</dir>
+  </file>
+  <file name="bbb.txt">
+    <dir>dir3</dir>
+    <dir>dir4</dir>
+    <dir>dir5</dir>
+  </file>
+  <file name="ccc.txt">
+    <dir>dir6</dir>
+    <dir>dir7</dir>
+  </file>
+  <file name="ddd.txt">
+    <dir>dir8</dir>
+    <dir>dir9</dir>
+  </file>
+  <file name="aaa.txt">
+    <dir>dir1</dir>
+    <dir>dir2</dir>
+  </file>
+  <file name="bbb.txt">
+    <dir>dir3</dir>
+    <dir>dir4</dir>
+    <dir>dir5</dir>
+  </file>
+  <file name="ccc.txt">
+    <dir>dir6</dir>
+    <dir>dir7</dir>
+  </file>
+  <file name="ddd.txt">
+    <dir>dir8</dir>
+    <dir>dir9</dir>
+  </file>
+  <file name="aaa.txt">
+    <dir>dir1</dir>
+    <dir>dir2</dir>
+  </file>
+  <file name="bbb.txt">
+    <dir>dir3</dir>
+    <dir>dir4</dir>
+    <dir>dir5</dir>
+  </file>
+  <file name="ccc.txt">
+    <dir>dir6</dir>
+    <dir>dir7</dir>
+  </file>
+  <file name="ddd.txt">
+    <dir>dir8</dir>
+    <dir>dir9</dir>
+  </file>
+  <file name="aaa.txt">
+    <dir>dir1</dir>
+    <dir>dir2</dir>
+  </file>
+  <file name="bbb.txt">
+    <dir>dir3</dir>
+    <dir>dir4</dir>
+    <dir>dir5</dir>
+  </file>
+  <file name="ccc.txt">
+    <dir>dir6</dir>
+    <dir>dir7</dir>
+  </file>
+  <file name="ddd.txt">
+    <dir>dir8</dir>
+    <dir>dir9</dir>
+  </file>
+  <file name="aaa.txt">
+    <dir>dir1</dir>
+    <dir>dir2</dir>
+  </file>
+  <file name="bbb.txt">
+    <dir>dir3</dir>
+    <dir>dir4</dir>
+    <dir>dir5</dir>
+  </file>
+  <file name="ccc.txt">
+    <dir>dir6</dir>
+    <dir>dir7</dir>
+  </file>
+  <file name="ddd.txt">
+    <dir>dir8</dir>
+    <dir>dir9</dir>
+  </file>
+  </file>
+</copy_files>

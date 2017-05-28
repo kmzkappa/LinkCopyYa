@@ -5,8 +5,115 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LinkCopyYa"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="LinkCopyYa" Height="350" Width="525"
+        ResizeMode="CanResizeWithGrip">
     <Grid>
-        
+        <DockPanel>
+            <Grid Margin="2, 2, 2, 2" DockPanel.Dock="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="40"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Content="Config File" Width="80" Margin="2,0,0,0" HorizontalAlignment="Left" />
+                <TextBox Grid.Column="1" x:Name="configFileTextBox" Margin="2,0,0,0" VerticalContentAlignment="Center" />
+                <Button Grid.Column="2" x:Name="configFileBrowseButton" Content="Browse..." Click="configFileBrowseButton_Click"  Margin="5,0,0,0" />
+                <Button Grid.Column="3" x:Name="dummyButton" Content="Load" Visibility="Hidden" Margin="2,0,0,0" />
+
+            </Grid>
+
+            <Grid Margin="2, 2, 2, 2" DockPanel.Dock="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="40"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Base Directory" HorizontalAlignment="Left" Margin="2,0,0,0" />
+                <TextBox Grid.Column="1" x:Name="baseDirTextBox" Margin="2,0,0,0" VerticalContentAlignment="Center" />
+                <Button Grid.Column="2" x:Name="baseDirBrowseButton" Content="Browse..." Click="baseDirBrowseButton_Click" Margin="5,0,0,0" />
+                <Button Grid.Column="3" x:Name="loadXmlButton" Content="Load" Click="loadXmlButton_Click" Margin="2,0,0,0" />
+            </Grid>
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom" HorizontalAlignment="Right">
+                <Button x:Name="manualCopyButton" Content="Overwrite Copy (Selected)" Padding="2,2,2,2" Margin="0,4,3,4" Click="manualCopyButton_Click" />
+                <Button x:Name="autoCopyButton" Content="Overwrite Copy (Auto)" Padding="2,2,2,2" Margin="0,4,20,4" Click="autoCopyButton_Click" />
+            </StackPanel>
+            
+            <DataGrid x:Name="mainDataGrid" AutoGenerateColumns="False" DockPanel.Dock="Left"
+                      ItemsSource="{Binding RecordModels, Mode=TwoWay}"
+                      CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" CanUserSortColumns="False"
+                      VerticalGridLinesBrush="#F0F0F0" GridLinesVisibility="Vertical"
+                      SelectionMode="Single" SelectionUnit="FullRow" HeadersVisibility="Column">
+
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsEvenGroup}" Value="True">
+                                <Setter Property="Background" Value="#EFF3F7" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding IsFileExists}" Value="False">
+                                <Setter Property="IsEnabled" Value="False" />
+                            </DataTrigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#FFA5D3E6" />
+                                <Setter Property="Foreground" Value="Black" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.RowStyle>
+                <DataGrid.CellStyle>
+                    <Style TargetType="DataGridCell">
+                        <Setter Property="Padding" Value="3"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type DataGridCell}">
+                                    <Border Padding="{TemplateBinding Padding}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                                        <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#FFA5D3E6" />
+                                <Setter Property="Foreground" Value="Black" />
+                                <Setter Property="BorderBrush" Value="Transparent" />
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter Property="Background" Value="#FFA5D3E6" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.CellStyle>
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn IsReadOnly="True" Header="Copy Base">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                      HorizontalAlignment="Center" VerticalAlignment="Center" Click="CheckBox_Click" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="Absolute Path" Binding="{Binding FileInformation.FullName}" />
+                    <DataGridTextColumn Header="Size(Bytes)" Binding="{Binding FileInformation.Length, StringFormat=#\,##0}" >
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="{x:Type TextBlock}" >
+                                <Setter Property="TextAlignment" Value="Right" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="Date Modified" Binding="{Binding LastWriteTime}" >
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="{x:Type TextBlock}" >
+                                <Setter Property="TextAlignment" Value="Right" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </DockPanel>
     </Grid>
 </Window>
